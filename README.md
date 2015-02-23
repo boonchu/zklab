@@ -34,3 +34,10 @@ bigchoo@server1 1060 \> sudo yum localinstall /var/lib/mock/epel-7-x86_64/result
 $ sudo systemctl enable zookeeper
 $ sudo systemctl start zookeeper
 ```
+###### Working with CLI
+* follow these instructions to download CLI tool
+  * https://github.com/davidledwards/zookeeper/tree/master/zookeeper-cli
+```
+bigchoo@vmk2 904 $ ./zk --version
+zk 1.3
+```
