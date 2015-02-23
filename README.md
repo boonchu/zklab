@@ -29,3 +29,8 @@ $ tree /var/lib/mock/epel-7-x86_64/result/
 ```
 bigchoo@server1 1060 \> sudo yum localinstall /var/lib/mock/epel-7-x86_64/result/libzookeeper-3.4.6-2.x86_64.rpm  /var/lib/mock/epel-7-x86_64/result/zookeeper-3.4.6-2.x86_64.rpm
 ```
+* update service unit files 
+```
+$ sudo systemctl enable zookeeper
+$ sudo systemctl start zookeeper
+```
