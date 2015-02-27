@@ -36,7 +36,8 @@ $ sudo systemctl start zookeeper
 ```
 ###### Working with CLI
 * follow these instructions to download CLI tool
-  * https://github.com/davidledwards/zookeeper/tree/master/zookeeper-cli
+  * [git source](https://github.com/davidledwards/zookeeper/tree/master/zookeeper-cli)
+  * [binary download latest 1.3](https://oss.sonatype.org/content/groups/public/com/loopfor/zookeeper/zookeeper-cli/1.3/)
 ```
 bigchoo@vmk2 904 $ ./zk --version
 zk 1.3
