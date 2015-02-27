@@ -100,6 +100,7 @@ root@vmk1 264 $ echo "2" > /var/lib/zookeeper/data/myid
 root@vmk2 264 $ echo "3" > /var/lib/zookeeper/data/myid
 ```
 * verify all nodes and find who is the leader
+
 ###### Zookeeper Chef
 ```
 $ knife cookbook site download zookeeper
