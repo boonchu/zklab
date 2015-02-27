@@ -41,4 +41,19 @@ $ sudo systemctl start zookeeper
 ```
 bigchoo@vmk2 904 $ ./zk --version
 zk 1.3
+bigchoo@server1 1121 \> ./zk server1:2181
+connecting to {server1:2181} @ / ...
+zk> ls /foo/bar
+/foo/bar: no such node
+zk> mk -r /foo/bar
+zk> ls /foo/bar
+zk> set -v 0 /foo/bar "hello world"
+zk> setacl -v 0 /foo/bar world:anyone=rw
+zk> get /foo/bar
+00000000  68 65 6c 6c 6f 20 77 6f 72 6c 64                 |hello world     |
+zk> stat -c /foo/bar
+3 6 3 2015-02-27T09:24:55.875-0800 2015-02-27T09:26:36.104-0800 1 0 1 0 11 0
+zk> getacl /foo/bar
+3,s{'world,'anyone}
+zk> rm -v 1 /foo/bar
 ```
