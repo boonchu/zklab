@@ -99,6 +99,7 @@ root@server1 264 $ echo "1" > /var/lib/zookeeper/data/myid
 root@vmk1 264 $ echo "2" > /var/lib/zookeeper/data/myid
 root@vmk2 264 $ echo "3" > /var/lib/zookeeper/data/myid
 ```
+* verify all nodes and find who is the leader
 ###### Zookeeper Chef
 ```
 $ knife cookbook site download zookeeper
@@ -107,3 +108,4 @@ Cookbook saved: /home/bigchoo/Cheflabs/zookeeper-2.5.1.tar.gz
 ```
 * Reference
   - [Used cluster instructions from Storm setup](http://www.michael-noll.com/tutorials/running-multi-node-storm-cluster/)
+  - [Multi Server Zookeeper setup](http://zookeeper.apache.org/doc/r3.3.3/zookeeperAdmin.html#sc_zkMulitServerSetup)
