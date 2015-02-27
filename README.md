@@ -62,11 +62,12 @@ zk> rm -v 1 /foo/bar
 * pull yum rpm package from artifactory and install to two provided extra nodes
 * test connection if service running?
 ```
-bigchoo@vmk1 1050 $ echo ruok | nc server1 2181
+root@server1 1016 \> for i in server1 vmk1 vmk2 ; do   echo "ping host $i"; echo "ruok" | nc $i 2181; echo ; done
+ping host server1
 imok
-bigchoo@vmk1 1048 $ echo ruok | nc vmk2 2181
+ping host vmk1
 imok
-bigchoo@vmk1 1049 $ echo ruok | nc vmk1 2181
+ping host vmk2
 imok
 ```
 * populate configuration for each worker
