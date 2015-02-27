@@ -68,6 +68,35 @@ imok
 bigchoo@vmk1 1049 $ echo ruok | nc vmk1 2181
 imok
 ```
+* populate configuration for each worker
+```
+root@vmk1 263 $ cat /etc/zookeeper/zoo.cfg
+# The number of milliseconds of each tick
+tickTime=2000
+# The number of ticks that the initial
+# synchronization phase can take
+initLimit=10
+# The number of ticks that can pass between
+# sending a request and getting an acknowledgement
+syncLimit=5
+# the directory where the snapshot is stored.
+dataDir=/var/lib/zookeeper/data
+# the port at which the clients will connect
+clientPort=2181
+
+# Enable regular purging of old data and transaction logs every 24 hours
+autopurge.purgeInterval=24
+autopurge.snapRetainCount=5
+
+server.1=server1:2888:3888
+server.2=vmk1:2888:3888
+server.3=vmk2:2888:3888
+```
+* add myid file for each worker and restart zk
+```
+root@server1 264 $ echo "1" > /var/lib/zookeeper/data/myid
+root@vmk1 264 $ echo "2" > /var/lib/zookeeper/data/myid
+root@vmk2 264 $ echo "3" > /var/lib/zookeeper/data/myid
 ###### Zookeeper Chef
 ```
 $ knife cookbook site download zookeeper
