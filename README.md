@@ -74,5 +74,5 @@ $ knife cookbook site download zookeeper
 Downloading zookeeper from the cookbooks site at version 2.5.1 to /home/bigchoo/Cheflabs/zookeeper-2.5.1.tar.gz
 Cookbook saved: /home/bigchoo/Cheflabs/zookeeper-2.5.1.tar.gz
 ```
-Reference
-* [borrowed cluster instructions from Storm setup](http://www.michael-noll.com/tutorials/running-multi-node-storm-cluster/)
+* Reference
+  - [Used cluster instructions from Storm setup](http://www.michael-noll.com/tutorials/running-multi-node-storm-cluster/)
