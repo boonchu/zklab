@@ -57,3 +57,20 @@ zk> getacl /foo/bar
 3,s{'world,'anyone}
 zk> rm -v 1 /foo/bar
 ```
+###### Zookeeper Cluster setup
+* pull yum rpm package from artifactory and install to two provided extra nodes
+* test connection if service running?
+```
+bigchoo@vmk1 1050 $ echo ruok | nc server1 2181
+imok
+bigchoo@vmk1 1048 $ echo ruok | nc vmk2 2181
+imok
+bigchoo@vmk1 1049 $ echo ruok | nc vmk1 2181
+imok
+```
+###### Zookeeper Chef
+```
+$ knife cookbook site download zookeeper
+Downloading zookeeper from the cookbooks site at version 2.5.1 to /home/bigchoo/Cheflabs/zookeeper-2.5.1.tar.gz
+Cookbook saved: /home/bigchoo/Cheflabs/zookeeper-2.5.1.tar.gz
+```
