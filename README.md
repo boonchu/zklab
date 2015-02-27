@@ -124,7 +124,17 @@ connecting to {server1:2181,vmk1:2181,vmk2:2181} @ / ...
 zk> ls /foo/bar
 /foo/bar: no such node
 ```
-
+###### Start with Kazoo
+```
+$ sudo yum install -y python-kazoo
+bigchoo@server1 ~/lab/zklab (master)*$ ./kz_con.py
+connected
+bigchoo@server1 ~/lab/zklab (master)*$ /tmp/zookeeper-cli-1.3/bin/zk server1:2181 vmk1:2181 vmk2:2181
+connecting to {server1:2181,vmk1:2181,vmk2:2181} @ / ...
+zk> ls /path
+zk> get /path
+00000000  64 61 74 61 5f 73 74 72 69 6e 67                 |data_string     |
+```
 ###### Zookeeper Chef
 ```
 $ knife cookbook site download zookeeper
