@@ -100,6 +100,22 @@ root@vmk1 264 $ echo "2" > /var/lib/zookeeper/data/myid
 root@vmk2 264 $ echo "3" > /var/lib/zookeeper/data/myid
 ```
 * verify all nodes and find who is the leader
+* shutdown one node (server1) while query service name.
+```
+bigchoo@server1 1173 \> ./zk server1:2181 vmk1:2181 vmk2:2181
+connecting to {server1:2181,vmk1:2181,vmk2:2181} @ / ...
+zk> ls /foo/bar
+hello world
+>>> I shutdown server1 service.
+
+root@server1 1000 \> systemctl stop zookeeper
+[12:04 Fri Feb 27] /home/bigchoo
+root@server1 1001 \> echo "ruok" | nc server1 2181
+Ncat: Connection refused.
+
+zk> ls /foo/bar
+hello world
+```
 
 ###### Zookeeper Chef
 ```
