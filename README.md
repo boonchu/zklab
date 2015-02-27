@@ -116,6 +116,13 @@ Ncat: Connection refused.
 zk> ls /foo/bar
 hello world
 ```
+* when I took service down from 2 nodes out of 3. Quorum changes and falls below 50%.
+```
+root@server1 1003 \> ./zk server1:2181 vmk1:2181 vmk2:2181
+connecting to {server1:2181,vmk1:2181,vmk2:2181} @ / ...
+zk> ls /foo/bar
+/foo/bar: no such node
+```
 
 ###### Zookeeper Chef
 ```
