@@ -98,6 +98,7 @@ server.3=vmk2:2888:3888
 root@server1 264 $ echo "1" > /var/lib/zookeeper/data/myid
 root@vmk1 264 $ echo "2" > /var/lib/zookeeper/data/myid
 root@vmk2 264 $ echo "3" > /var/lib/zookeeper/data/myid
+```
 ###### Zookeeper Chef
 ```
 $ knife cookbook site download zookeeper
