@@ -1,5 +1,5 @@
-###### Zoo Keeper 
-* Zoo keeper has been using in many application which need service discovery lookup. 
+###### [ZooKeeper](http://www.slideshare.net/jimmy_lai/distributed-system-coordination-by-zookeeper-and-introduction-to-kazoo-python-library)
+* ZooKeeper has been using in many application which need service discovery lookup. 
 
 * How to build it on Cent OS 7.x
 ```
